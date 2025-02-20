@@ -1,0 +1,357 @@
+html {
+    background-color: hsl(20, 50%, 98%);
+    font-family: "Red Hat Text", serif;
+    --primary-color: hsl(14, 86%, 42%);
+    --color-50: hsl(20, 50%, 98%);
+    --color-100: hsl(13, 31%, 94%);
+    --color-300: hsl(14, 25%, 72%);
+    --color-400: hsl(7, 20%, 60%);
+    --color-500: hsl(12, 20%, 44%);
+    --color-900: hsl(14, 65%, 9%);
+}
+
+button {
+    font-family: "Red Hat Text", serif;
+}
+
+p, h2 {
+    margin: 0;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    margin: 50px;
+    background-color: var(--color-50);
+}
+
+.menu-section {
+    width: 70%;
+}
+
+.cart-section {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 8px;
+    height: auto;
+    padding: 20px;
+    gap: 20px;
+    height: min-content;
+}
+
+.your-cart-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--color-500);
+}
+
+.cart-title {
+    color: var(--primary-color);
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    gap: 30px 20px;
+}
+
+.menu-item, .description {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.image-section {
+    position: relative;
+}
+
+.description {
+    gap: 8px;
+}
+
+.item-image {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.item-name {
+    font-weight: 700;
+}
+
+.price {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.category {
+    font-size: 12px;
+}
+
+.add-to-cart {
+    font-weight: 600;
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px;
+    border: 1px solid var(--color-300);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 50%;
+
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.add-to-cart:hover {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.quantity-selector {
+    font-weight: 600;
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    color: white;
+
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.minus, .plus {
+    background: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    border: 2px solid white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.minus:hover, .plus:hover {
+    background-color: white;
+}
+
+.minus-svg:hover {
+    fill: var(--primary-color);
+}
+
+.minus:hover path, .plus:hover path {
+    fill: var(--primary-color);
+}
+
+.order-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    color: black;
+    border-bottom: 1px solid var(--color-100);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.delete-from-order {
+    border: 2px solid var(--color-300);
+    border-radius: 50%;
+    background: none;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+}
+
+.delete-from-order:hover,  .delete-from-order:hover path {
+    border-color: var(--color-900);   
+    fill: var(--color-900);
+}
+
+.order-item-name {
+    margin: 0;
+}
+
+.order-item-information {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.order-item-stat {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.oreder-item-name {
+    margin: 0;
+}
+
+.quantity-order, .order-conf-item-quantity {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.item-price, .order-conf-item-price {
+    color: var(--color-500);
+    font-weight: 400;
+}
+
+.item-price-all {
+    color: var(--color-500);
+    font-weight: 600;
+}
+
+.order-total {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.order-total-price, .order-conf-total-price {
+    font-weight: 700;
+    font-size: larger;
+}
+
+.confirm-order {
+    border-radius: 50px;
+    border: none;
+    color: white;
+    background-color: var(--primary-color);
+    padding: 15px 0 15px 0;
+    font-weight: 600;
+    font-size: large;
+}
+
+.confirm-order:hover, .start-new-order:hover {
+    background-color: var(--color-500);
+}
+
+.delivery-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--color-50);
+    padding: 15px 0 15px 0;
+    gap: 5px;
+}
+
+strong {
+    white-space: pre;
+}
+
+.order-confirmation-section {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    z-index: 1000;
+}
+
+.order-conf-title {
+    margin: 20px 0 10px 0;
+}
+
+.order-conf-desc {
+    color: var(--color-500);
+    margin-bottom: 10px;
+}
+
+.start-new-order {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+.order-conf-item {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: stretch;
+    padding: 15px;
+    border-bottom: 1px solid var(--color-100);
+    align-items: center;
+}
+
+.order-conf-item img {
+    border-radius: 8px;
+    width: auto;
+    height: 50px;
+
+}
+
+.img-thumbnail-right-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: 40px;
+    height: 100%;
+    align-items: center;
+}
+
+.order-conf-item-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.order-conf-item-qp {
+    display: flex;
+    flex-direction: row;
+}
+
+.order-conf-total-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.order-conf-items {
+    background-color: var(--color-50);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
